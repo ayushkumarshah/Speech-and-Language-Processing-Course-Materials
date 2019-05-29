@@ -1,0 +1,101 @@
+AI>ML>DL
+
+-Deep Learning- ML where no need to feed which features to extract from data. 
+-The algorithm automatically detects the patterns from data.
+-Needs more data than ML
+
+Linear Regression-Prediction
+Y=AX+B
+A-Weights
+B-Bias
+Y-labels/outputs
+X-inputs
+
+Learning rate incrase or decrease the number of iterations to converge to 0 ?
+Tensor- Matrices but use GPU instead of CPU
+
+MSC-Mean Square Loss: (Y-Ypred)**2
+Gradient- partial derivaitve w.r.to a and b
+Gradient descent- subtracting gradient from Y
+
+Logistic Regression- Classification
+
+Softmax function(Similar to sigmoid)-convert output (Y) to probability
+-also called activation function
+-linear input-> non linear output
+-for multiple classes (sigmoid preferred for binary class)
+
+
+Sum of softmaxes=1
+
+Softmax=Exp(Y)/Sum(Exp(Y))
+
+Cross Etropy Loss function- (similar to MSC in linear regression) deals with probablity
+
+RELU- rectified linear unit ()- convert linear to non linear
+
+Neural network- sumilar to Logistic regression but with hidden layer
+
+hidden layer- actvation function like RLU , .... to convert linear to non linear
+use of hidden layer- for classification of non linear data eg object detection, speech recognition, etc where simple logistic regression doesn't work.
+
+1 hidden layer- feed forward neural network
+multilple hidden layers- deep learning
+
+Back propagation- gradient descent in multiple layers since each layer has its own weights and bias.
+
+Convolution layer
+- performs better than hidden layers (different from hidden layer) for image classification which identifies features of images better
+- for building concolutional neural network
+
+Maxpool layer
+used with convolution layer (different from hidden layer) for image classification which identifies features of images better
+
+COde
+
+Sequential-to create neural network
+
+Dense-name of layer in terms of keras
+
+Flatten-convert convolution layer to 1 D
+
+Imagedatagenerator- load images from your directory suitable for keras easily
+
+TO increase accuracy:
+Data augmentation
+-same image passed with some modifications in each epoch so that there are unlimited samples of training images 
+	
+Dropout
+-randomly reduce certain percent of neurons in each training epoch
+
+Overfitting:
+training accuracy very high but validation accuracy low
+
+New techniques:
+
+Transfer Learning
+requires small dataset for gaining high accuracy using deep learning
+
+Important Links:
+
+1. www.tensorflow.org/tutorials   ->  	Image retraining (for transfer learning discussed above)
+
+2. Intel devcloud - A system for 30 days free
+
+3. Google COlab- free 12 gb ram ,GPU for lifetime
+
+4. TFlite- for buildings model for mobile and offline
+
+5. coursera- Deep learning, AI courses (time consuming)
+
+6. fast.ai -free DL, ML course
+		-project oriented
+		-free notebook
+		-start with practical deep learning for coders
+		-but time consuming
+		-complete at least part 1 and 2 to complete any ML/DL/AI project overnight
+
+7. colah.github.io -Neural Network blogs by Crish Colah
+				   -very informative blog
+8. kaggle -free GPU (15GB)
+	  -free datasets

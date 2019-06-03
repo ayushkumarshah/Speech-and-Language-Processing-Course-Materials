@@ -1,0 +1,57 @@
+Installing megam on windows:
+
+1. Download OCaml (Link in Description)
+https://fdopen.github.io/opam-repository-mingw/installation/
+
+Download Graphical Installer (32 or 64 bit according to your PC)
+
+2. Install OCaml by running the downloaded file and following the onscreen instructions.
+
+3. Download MEGAM’s source (Link in Description)
+http://www.umiacs.umd.edu/~hal/megam/index.html
+
+Download source code in section Source: megam_src.tgz
+
+4. Extract the downloaded MEGAM's source code and put the folder "megam_0.92" into the
+   path of your Cygwin: "C:\OCaml64\home\(user)\"
+
+5. Run Cygwin Terminal shortcut from Desktop. 
+
+6. Enter the following command in the terminal:
+	cd megam_0.92/
+
+7. Find the path of ocmal library by typing the command below in the terminal:
+	ocamlc -where
+
+	Output in my case: C:/OCaml64/home/ayush/.opam/ocaml-variants.4.07.1+mingw64c/lib/ocaml
+
+8. Now go to  "C:\OCaml64\home\(user)\megam_0.92\" and open Makefile with any text editor 
+   like wordpad or sublime text editor.
+
+9. Edit the Makefile
+
+	#WITHSTR =str.cma -cclib -lstr
+	WITHSTR =str.cma -cclib -lcamlstr
+	.
+	.
+	.
+	#WITHCLIBS =-I /usr/lib/ocaml/caml
+	WITHCLIBS =-I (The ouput obtained in step 7)/caml
+	
+10. Open terminal and type the command: make
+
+11. megam.exe file is created. Now add this lines in your python code:
+	
+	import nltk
+	nltk.config_megam("C:/OCaml64/home/(user)/megam_0.92/megam.exe")  #path of your megam.exe
+
+Done!! 
+
+Comment if any queries. 
+
+Thank you. PLease like, share and subscribe if you like the video.
+
+	
+
+
+ 
